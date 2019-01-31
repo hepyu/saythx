@@ -4,7 +4,7 @@ services:
   saythx-frontend:
     build:
       context: fe/.
-    image: taobeier/saythx-fe
+    image: hpy253215039/saythx-fe
     ports:
       - "8088:80"
     depends_on:
@@ -15,7 +15,7 @@ services:
   saythx-backend:
     build:
       context: be/.
-    image: taobeier/saythx-be
+    image: hpy253215039/saythx-be
     depends_on:
       - saythx-redis
     networks:
@@ -26,7 +26,7 @@ services:
   saythx-work:
     build:
       context: work/.
-    image: taobeier/saythx-work
+    image: hpy253215039/saythx-work
     depends_on:
       - saythx-redis
     networks:
